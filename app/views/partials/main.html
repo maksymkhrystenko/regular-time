@@ -1,0 +1,147 @@
+<section id="todoapp">
+    <!--
+        <header id="header">
+            <h1>todos</h1>
+            <form id="todo-form" ng-submit="addTodo()">
+                <input id="new-todo" placeholder="What needs to be done?" ng-model="newTodo">
+            </form>
+        </header>
+        <section id="main" ng-show="todos.length" ng-cloak>
+            <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul id="todo-list">
+                <li ng-repeat="(id, todo) in todos | filter:statusFilter track by $index"
+                    ng-class="{completed: todo.completed, editing: todo == editedTodo}">
+                    <div class="view">
+                        <input class="toggle" type="checkbox" ng-model="todo.completed" ng-change="todo.$update()">
+                        <label ng-dblclick="editTodo(id)">{{todo.title}}</label>
+                        <button class="destroy" ng-click="removeTodo(id)"></button>
+                    </div>
+                    <form ng-submit="doneEditing(id)">
+                        <input class="edit" ng-model="todo.title" todo-escape="revertEditing(id)" ng-blur="doneEditing(id)"
+                               todo-focus="todo == editedTodo">
+                    </form>
+                </li>
+            </ul>
+        </section>
+        <footer id="footer" ng-show="todos.length" ng-cloak>
+        <span id="todo-count"><strong>{{remainingCount}}</strong>
+          <ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+        </span>
+            <ul id="filters">
+                <li>
+                    <a ng-class="{selected: status == ''} " href="?">All</a>
+                </li>
+                <li>
+                    <a ng-class="{selected: status == 'active'}" href="?q=active">Active</a>
+                </li>
+                <li>
+                    <a ng-class="{selected: status == 'completed'}" href="?q=completed">Completed</a>
+                </li>
+            </ul>
+            <button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed
+                ({{completedCount}})
+            </button>
+        </footer>
+    -->
+
+
+
+
+
+
+
+
+
+    <header id="header">
+        <h1>Табельное время</h1>
+    </header>
+    <section id="main"  ng-cloak>
+        <div>
+            <button class=" btn btn-sm margin-6 btn-danger pull-right" ng-click="addEmployeeModal()"><i class="fa fa-plus" aria-hidden="true"></i> Добавить сотрудника
+            </button>
+            <button class=" btn btn-sm margin-6 btn-danger pull-right" ng-click="addRegularTimeModal()"><i class="fa fa-plus" aria-hidden="true"></i> Добавить табельное время
+            </button>
+        </div>
+        <div class="clearfix"></div>
+
+        <table width="100%" id="regular-time-datatable" datatable dt-options="dtOptions"  dt-column-defs="dtColumnDefs"  dt-columns="dtColumns" class="row"/>
+
+
+     <!--   <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+        <label for="toggle-all">Mark all as complete</label>
+        <header id="header">
+            <div class="col-xs-4">
+                <label class="">Сотрудник</label>
+            </div>
+            <div class="col-xs-2">
+                <label class="">Дата</label>
+            </div>
+            <div class="col-xs-2">
+                <label class="">Время начала работы</label>
+            </div>
+            <div class="col-xs-2">
+                <label class="">Время окончания работы</label>
+            </div>
+            <div class="col-xs-2">
+                <label class="">Действия</label>
+            </div>
+        </header>
+        <ul id="regular-times-list">
+            <li ng-repeat="(id, regularTime) in regularTimes | filter:statusFilter track by $index" >
+                <div class="view">
+                    &lt;!&ndash; <input class="toggle" type="checkbox" ng-model="todo.completed" ng-change="todo.$update()">&ndash;&gt;
+                    <div class="col-xs-4">
+                        <span>{{$index}}</span> <label class="employeeName" ng-dblclick="editRegularTime(id)">{{regularTime.employeeId}}</label>
+                    </div>
+                    <div class="col-xs-2">
+                        {{regularTime.startTimeOfWorkingDay | amUtc | amDateFormat:'MM.DD.YYYY'}}
+                    </div>
+                    <div class="col-xs-2">
+                        {{regularTime.startTimeOfWorkingDay  | amDateFormat:'HH:mm'}}
+                    </div>
+                    <div class="col-xs-2">
+                        {{regularTime.endTimeOfWorkingDay | amDateFormat:'HH:mm'}}
+                    </div>
+                    <div class="col-xs-2">
+                        <button type="button" class="btn btn-lg btn-danger" ng-click="editRegularTimeModal(id)"><i
+                                class="fa fa-pencil-square" aria-hidden="true"></i>
+                        </button>
+
+                        <button class=" btn btn-lg btn-danger" ng-click="removeRegularTime(id)"><i class="fa fa-times"
+                                                                                                   aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                &lt;!&ndash;    <form ng-submit="doneEditingRegularTime(id)">
+                        <input class="edit" ng-model="todo.title" todo-escape="revertEditingRegularTime(id)"
+                               ng-blur="doneEditingRegularTime(id)" todo-focus="regularTime == editedRegularTime">
+                    </form>&ndash;&gt;
+
+            </li>
+        </ul>-->
+
+    </section>
+ <!--   <footer id="footer" ng-show="regularTimes.length" ng-cloak>
+        &lt;!&ndash; <span id="todo-count"><strong>{{remainingCount}}</strong>
+           <ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+         </span>&ndash;&gt;
+        <ul id="filters">
+            <li>
+                <a ng-class="{selected: status == ''} " href="?">All</a>
+            </li>
+            <li>
+                <a ng-class="{selected: status == 'active'}" href="?q=active">Active</a>
+            </li>
+            <li>
+                <a ng-class="{selected: status == 'completed'}" href="?q=completed">Completed</a>
+            </li>
+        </ul>
+        <button id="clear-completed" ng-click="clearCompletedRegularTimes()" ng-show="completedCount">Clear completed
+            ({{completedCount}})
+        </button>
+    </footer>-->
+
+</section>

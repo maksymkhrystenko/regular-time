@@ -1,0 +1,12 @@
+Распаковать в директорию
+npm install
+bower install
+
+На вопрос в терминале 
+Unable to find a suitable version for angular, please choose one by typing one of the numbers below: 
+ответить angular#^1.5.8 
+
+запустить db_backup/importDB.bat
+grunt serve
+
+
